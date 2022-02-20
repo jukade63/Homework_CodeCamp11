@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook-เข้าสู่ระบบหรือสมัครการใช้งาน</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+      }
+      body {
+        background-color: rgb(244, 245, 247);
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style-type: none;
+      }
+      hr {
+        margin: 10px auto;
+        border-top: 0.2px solid lightgray;
+      }
+      .title {
+        height: 135px;
+        margin-top: 10px;
+      }
+      .title h1 {
+        font-size: 55px;
+        color: #1877f2;
+        font-weight: bolder;
+        margin-bottom: 10px;
+      }
+      .title h3 {
+        font-size: 24px;
+        font-weight: 400;
+        width: 400px;
+      }
+      .login-container {
+        height: 360px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px rgb(220, 218, 218);
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      input {
+        font-size: 19px;
+        font-weight: 400;
+        padding: 14px 16px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        width: 364px;
+        border: 1px solid lightgray;
+        outline: none;
+      }
+      input[type='text']:focus,
+      input[type='password']:focus {
+        border: 0.5px solid #1877f2;
+        box-shadow: 0 0 5px #ddd;
+      }
+      ::placeholder {
+        color: rgb(175, 173, 173);
+      }
+      input[type='submit'] {
+        background-color: #1877f2;
+        font-size: 22px;
+        color: white;
+        font-weight: 700;
+        border: none;
+      }
+      #forget {
+        border: none;
+        background-color: white;
+        color: #1877f2;
+        font-size: 16px;
+        border-bottom: 0.1px solid lightgray;
+        margin-bottom: 15px;
+        border-radius: 0;
+      }
+      #newac {
+        width: 180px;
+        align-self: center;
+        background-color: rgb(66, 183, 42);
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .container {
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 40px;
+        padding: 20px 0;
+      }
+      @media (min-width: 900px) {
+        .full-page {
+          height: 100vh;
+        }
+        .container {
+          flex-direction: row;
+          justify-content: center;
+          margin: auto 57px;
+          height: 500px;
+        }
+        .title {
+          text-align: left;
+          width: 580px;
+          padding-right: 50px;
+        }
+      }
+      footer {
+        color: rgb(115, 115, 115);
+        background-color: white;
+        display: block;
+        height: auto;
+        padding: 25px;
+      }
+      .languages,
+      .all-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .languages > *,
+      .all-info > * {
+        font-size: 14px;
+        line-height: 1.76;
+      }
+      .languages li:not(:first-child) {
+        padding-left: 10px;
+      }
+      .all-info > * {
+        padding-right: 10px;
+      }
+      li a {
+        text-decoration: none;
+        color: rgb(115, 115, 115);
+      }
+
+      #plus {
+        border: 0.2px solid lightgray;
+        padding: 0.5px 10px;
+        border-radius: 3px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .copyright {
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-page">
+      <div class="container">
+        <div class="title">
+          <h1>facebook</h1>
+          <h3>Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ</h3>
+        </div>
+        <div class="login-container">
+          <form class="login-form" action="">
+            <input type="text" placeholder="อีเมลล์หรือหมายเลขโทรศัพท์มือถือ" />
+            <input type="password" placeholder="รหัสผ่าน" />
+            <input type="submit" value="เข้าสู่ระบบ" />
+            <input id="forget" type="button" value="ลืมรหัสผ่านใช่หรือไม่" />
+
+            <input id="newac" type="button" value="สร้างบัญชีใหม่" />
+          </form>
+          <p><strong>สร้างเพจ</strong>สำหรับคนดัง แบรนด์ หรือธุรกิจ</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-main">
+        <ul class="languages">
+          <li>ภาษาไทย</li>
+          <li><a href="#" >English (UK)</a></li>
+          <li><a href="#" >日本語</a></li>
+          <li><a href="#">中文(简体)</a></li>
+          <li><a href="#">Tiếng Việt</a></li>
+          <li><a href="#">Français (France)</a></li>
+          <li><a href="#">Deutsch</a></li>
+          <li><a href="#">Русский</a></li>
+          <li><a href="#">Español</a></li>
+          <li>
+            <a href="#">Português (Brasil)</a>
+          </li>
+          <li><a href="#">Italiano</a></li>
+          <li>
+            <a id="plus" href="#" > + </a>
+          </li>
+        </ul>
+        <hr>
+        <ul class="all-info">
+            <li><a href="#" >สมัคร</a></li>
+            <li><a href="#" >เข้าสู่ระบบ</a></li>
+            <li><a href="#" >Messenger</a></li>
+            <li><a href="#">Facebook Lite</a></li>
+            <li><a href="#" >Watch</a></li>
+            <li><a href="#" >ผู้คน</a></li>
+            <li><a href="#">สถานที่</a></li>
+            <li><a href="#">เกม</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Facebook Pay</a></li>
+            <li><a href="#" >Oculus</a></li>
+            <li><a href="#">Portal</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">ในพื้นที่</a></li>
+            <li><a href="#">โครงการระดมทุน</a></li>
+            <li><a href="#">บริการ</a></li>
+            <li><a href="#">ศูนย์ข้อมูลการลงคะแนนเสียง</a></li>
+            <li><a href="#">เกี่ยวกับ</a></li>
+            <li><a href="#">สร้างโฆษณา</a></li>
+            <li><a href="#">สร้างเพจ</a></li>
+            <li><a href="#">ผู้พัฒนา</a></li>
+            <li><a href="#">ร่วมงานกับ Facebook</a></li>
+            <li><a href="#">ความเป็นส่วนตัว</a></li>
+            <li><a href="#" >คุกกี้</a></li>
+            <li><a href="#" >ตัวเลือกโฆษณา</a></li>
+            <li><a href="#" >เงื่อนไข</a></li>
+            <li><a href="#" >ความช่วยเหลือ</a></li>
+          </ul>
+          <p class="copyright">Meta © 2022</p>
+    </footer>
+  </body>
+</html>
