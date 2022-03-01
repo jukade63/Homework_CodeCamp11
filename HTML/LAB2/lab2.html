@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>1.ค้นหาข้อมูลว่าแท็ก &lt;!DOCTYPE &gt; มีหน้าที่อะไร?</h2>
+    <p>
+      &lt;!DOCTYPE &gt; เป็นการแจ้งข้อมูลให้กับ browser
+      ว่าเอกสารที่กำลังจะเขียนเป็นเอกสารชนิดใด เช่น ถ้าเป็น html 5
+      ก็จะประกาศเป็น &lt;!DOCTYPE html &gt;
+    </p>
+    <h2>2.ถ้าอยากให้มี tooltip ใน tag นั้นต้องใช้ attribute ใด?</h2>
+    <p>ใช้ attribute "title"</p>
+    <h2>
+      3. แท็ก &lt; b &gt; , &lt; i &gt; ต่างจาก &lt; strong &gt;, &lt; em &gt;
+      หรือไม่ อย่างไร?
+    </h2>
+    <p>
+      ทั้งคู่ ไม่มีความแตกต่างในแง่การแสดงผลบนหน้าเว็บ แต่ &lt; strong &gt; และ
+      &lt; em &gt; เป็น semantic tags ซึ่งจะถูกให้ความสำคัญและช่วยในการ optimize
+      หน้าเว็บด้วย เช่น ทำให้ screen reader สามารถแปลความหมายได้ แตกต่างจาก &lt;
+      b &gt; , &lt; i &gt; ที่จะถูกมองว่าเป็นแค่ตัวหนาและตัวเอียงธรรมดา
+    </p>
+    <h2>
+      4.หา tag ที่สามารถแสดงข้อความกลับหลังได้ เช่น โปรแกรมเมอร์ แสดงเป็น
+      ร์อมเมรกแรปโ
+    </h2>
+    <p>tag bdo โดยกำหนด attribute dir='rtl'</p>
+    <span>โปรแกรมเมอร์ : </span><bdo dir="rtl">โปรแกรมเมอร์</bdo>
+  </body>
+</html>

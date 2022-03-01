@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>booking-grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: 'Trebuchet MS', sans-serif;
+        background-color: #ddd;
+        font-size: 18px;
+      }
+      form {
+        margin: 10rem auto;
+        width: 80%;
+      }
+      .row {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px 30px;
+      }
+      input,
+      select {
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        color: #666;
+        width: 100%;
+        padding: 0.5em;
+        margin: 0.2rem 0 1rem 0;
+        border: 1.2px solid #c4cae0;
+        border-radius: 3px;
+      }
+      .inner-row {
+        display: grid;
+        width: 300px;
+        margin-inline: auto;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 1em;
+      }
+      input[type='submit'] {
+        font-size: 20px;
+        font-weight: 600;
+        width: 8em;
+        padding: 0.6em;
+        background-color: orangered;
+        border: 0.5px solid black;
+        color: #fff;
+        margin-top: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="row">
+        <div class="column">
+          <label for="from">Flying from</label><br />
+          <select name="from" id="from">
+            <option value="karachi">Karachi, Pakistan</option>
+            <option value="Islamabad">Islamabad, Pakistan</option>
+            <option value="krung thep">Krung-Thep, Thailand</option>
+            <option value="Phuket">Phuket, Thailand</option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="to">To</label><br />
+          <select name="to" id="to">
+            <option value="Islamabad">Islamabad, Pakistan</option>
+            <option value="karachi">Karachi, Pakistan</option>
+            <option value="krung thep">Krung-Thep, Thailand</option>
+            <option value="Phuket">Phuket, Thailand</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="depart">Daparting</label><br />
+          <input type="date" id="dapart" name="depart" />
+        </div>
+        <div class="column">
+          <label for="return">Returning</label><br />
+          <input type="date" id="return" name="return" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="inner-row">
+          <div>
+            <label for="adult">Adult</label><br />
+            <input type="number" id="adult" name="adult" min="1" />
+          </div>
+          <div>
+            <label for="child">Child</label><br />
+            <input type="number" id="child" name="child" min="1" />
+          </div>
+          <div>
+            <label for="infant">Infant</label><br />
+            <input type="number" id="infant" name="infant" min="1" />
+          </div>
+          <div>
+            <label for="currency" style="color: red">Currency</label><br />
+            <select id="currency" name="currency" step="1">
+              <option value="THB">THB</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="SEARCH" />
+    </form>
+  </body>
+</html>
