@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <script>
+      //#1
+      if ('0') {
+        alert('Hello Codecamp #5')
+      }
+      //ตอบ โชว์
+
+      //#2
+      let myName = prompt('ลองทายชื่อฉันดู')
+      let msg
+      if (myName == 'adil') {
+        msg = 'คุณเก่งมาก'
+      } else {
+        msg = 'คุณไม่รู้จักชื่อฉัน'
+      }
+      alert(msg)
+
+      //#3
+      let score = +prompt('กรอกคะแนนของคุณ')
+      let message
+      if (score >= 80) {
+        message = 'คุณได้เกรด A'
+      } else if (score >= 70) {
+        message = 'คุณได้เกรด B'
+      } else if (score >= 60) {
+        message = 'คุณได้เกรด C'
+      } else if (score >= 50) {
+        message = 'คุณได้เกรด D'
+      } else if (score < 50) {
+        message = 'คุณได้เกรด F'
+      } else {
+        message = 'ข้อมูลไม่ถูกต้อง'
+      }
+      alert(message)
+      //#4
+      let age = prompt('How old are you?')
+      let price
+      price = age < 18 ? 2000 : 3500
+    </script>
+  </body>
+</html>
