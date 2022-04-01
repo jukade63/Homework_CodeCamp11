@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      //8.1
+      function ucFirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1)
+      }
+
+      //8.2
+      let checkSpam = (string) =>
+        string == 'xxx' || string == 'viagra' ? true : false
+
+      //8.3
+      let truncate = (string, maxLength) =>
+        string.length >= maxLength ? string.slice(0, maxLength) + '...' : string
+
+      // 8.4
+      function extractCurrencyValue(string, rate) {
+        return parseInt(string.slice(1)) * rate
+      }
+    </script>
+  </body>
+</html>

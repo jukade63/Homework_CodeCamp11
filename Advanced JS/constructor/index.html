@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Constructor กับ New</title>
+  </head>
+  <body>
+    <script>
+      //6.1
+      function Calculator() {
+        this.read = function () {
+          this.num1 = +prompt('enter num1')
+          this.num2 = +prompt('enter num2')
+        }
+        this.sum = function () {
+          return this.num1 + this.num2
+        }
+        this.mul = function () {
+          return this.num1 * this.num2
+        }
+      }
+
+      let calculator = new Calculator()
+      calculator.read()
+      alert(calculator.sum())
+      alert(calculator.mul())
+
+      //6.2
+      function Accumulator(startingValue) {
+        this.value = startingValue
+        this.read = function () {
+          this.value += +prompt('Enter a value to be added')
+        }
+      }
+    </script>
+  </body>
+</html>

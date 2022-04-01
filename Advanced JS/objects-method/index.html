@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object's methods</title>
+  </head>
+  <body>
+    <script>
+      //5.1 การทำงานของ code ดังกล่าวจะได้อะไรออกมา
+
+      let user = {
+        name: 'John',
+        go: function () {
+          alert(this.name)
+        },
+      }(user.go)() // 'John'
+
+      //5.2
+      function makeUser() {
+        return {
+          name: 'John',
+          ref: this,
+        }
+      }
+
+      let user2 = makeUser()
+
+      alert(user2.ref.name) // What's the result?
+
+      // เป็น string เปล่า('')
+
+      //5.3
+      let calculator = {
+        read() {
+          this.num1 = +prompt('enter first number')
+          this.num2 = +prompt('enter second number')
+        },
+        sum() {
+          return this.num1 + this.num2
+        },
+        mul() {
+          return this.num1 * this.num2
+        },
+      }
+      calculator.read()
+      alert(calculator.sum())
+      alert(calculator.mul())
+
+      //5.4
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++
+        },
+        down() {
+          this.step--
+        },
+        showStep: function () {
+          alert(this.step)
+        },
+      }
+    </script>
+  </body>
+</html>

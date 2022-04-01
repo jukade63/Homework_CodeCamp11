@@ -1,154 +1,156 @@
-//#1
-function draw(n) {
-  let star = ''
-  for (let i = 0; i < n; i++) {
-    star = star + '*'
-  }
-  console.log(star)
-}
-
-//#2
-function draw(n) {
-  let star = ''
-  for (let column = 0; column < n; column++) {
-    star = star + '*'
-  }
-  for (let row = 0; row < n; row++) {
+<script>
+  //#1
+  function draw(n) {
+    let star = ''
+    for (let i = 0; i < n; i++) {
+      star = star + '*'
+    }
     console.log(star)
   }
-}
 
-//#3
-function draw(n) {
-  let numbers = ''
-  for (let column = 1; column <= n; column++) {
-    numbers = numbers + column
+  //#2
+  function draw(n) {
+    let star = ''
+    for (let column = 0; column < n; column++) {
+      star = star + '*'
+    }
+    for (let row = 0; row < n; row++) {
+      console.log(star)
+    }
   }
-  for (let row = 1; row <= n; row++) {
+
+  //#3
+  function draw(n) {
+    let numbers = ''
+    for (let column = 1; column <= n; column++) {
+      numbers = numbers + column
+    }
+    for (let row = 1; row <= n; row++) {
+      console.log(numbers)
+    }
+  }
+  //#4
+  function draw(n) {
+    let numbers = ''
+    for (let column = 1; column <= n; column++) {
+      numbers = numbers + 1
+    }
+    for (let row = 1; row <= n; row++) {
+      console.log(numbers * row)
+    }
+  }
+  //#5
+  function draw(n) {
+    let numbers = ''
+    for (let column = n; column > 0; column--) {
+      numbers = numbers + 1
+    }
+    for (let row = n; row > 0; row--) {
+      console.log(numbers * row)
+    }
+  }
+  //#6
+  function draw(n) {
+    let numbers = ''
+    for (let column = 1; column <= n * n; column++) {
+      numbers = numbers + column
+      if (column % n === 0) {
+        numbers += '\n'
+      }
+    }
     console.log(numbers)
   }
-}
-//#4
-function draw(n) {
-  let numbers = ''
-  for (let column = 1; column <= n; column++) {
-    numbers = numbers + 1
-  }
-  for (let row = 1; row <= n; row++) {
-    console.log(numbers * row)
-  }
-}
-//#5
-function draw(n) {
-  let numbers = ''
-  for (let column = n; column > 0; column--) {
-    numbers = numbers + 1
-  }
-  for (let row = n; row > 0; row--) {
-    console.log(numbers * row)
-  }
-}
-//#6
-function draw(n) {
-  let numbers = ''
-  for (let column = 1; column <= n * n; column++) {
-    numbers = numbers + column
-    if (column % n === 0) {
-      numbers += '\n'
+  //#7
+  function draw(n) {
+    let numbers = ''
+    for (let column = n * n; column > 0; column--) {
+      numbers = numbers + column
+      if ((column % n) - 1 === 0) {
+        numbers += '\n'
+      }
     }
+    console.log(numbers)
   }
-  console.log(numbers)
-}
-//#7
-function draw(n) {
-  let numbers = ''
-  for (let column = n * n; column > 0; column--) {
-    numbers = numbers + column
-    if ((column % n) - 1 === 0) {
-      numbers += '\n'
-    }
-  }
-  console.log(numbers)
-}
 
-//#8
-function draw(n) {
-  for (let i = 0; i < n; i++) {
-    console.log(i * 2)
+  //#8
+  function draw(n) {
+    for (let i = 0; i < n; i++) {
+      console.log(i * 2)
+    }
   }
-}
-draw(3)
+  draw(3)
 
-//#9
-function draw(n) {
-  for (let i = 1; i <= n; i++) {
-    console.log(i * 2)
+  //#9
+  function draw(n) {
+    for (let i = 1; i <= n; i++) {
+      console.log(i * 2)
+    }
   }
-}
-//#10
-function draw(n) {
-  let numbers = ''
-  for (let column = 1; column <= n; column++) {
-    numbers = numbers + column
+  //#10
+  function draw(n) {
+    let numbers = ''
+    for (let column = 1; column <= n; column++) {
+      numbers = numbers + column
+    }
+    for (let row = 1; row <= n; row++) {
+      console.log(numbers * row)
+    }
   }
-  for (let row = 1; row <= n; row++) {
-    console.log(numbers * row)
-  }
-}
 
-//#11
-function draw(n) {
-  for (let row = 0; row < n; row++) {
-    let write = ''
-    for (let col = 0; col < n; col++) {
-      if (col == row) {
-        write = write + '_'
-      } else {
-        write = write + '*'
+  //#11
+  function draw(n) {
+    for (let row = 0; row < n; row++) {
+      let write = ''
+      for (let col = 0; col < n; col++) {
+        if (col == row) {
+          write = write + '_'
+        } else {
+          write = write + '*'
+        }
       }
+      console.log(write)
     }
-    console.log(write)
   }
-}
-//#12
-function draw(n) {
-  for (let row = n; row > 0; row--) {
-    let write = ''
-    for (let col = 1; col <= n; col++) {
-      if (col == row) {
-        write = write + '_'
-      } else {
-        write = write + '*'
+  //#12
+  function draw(n) {
+    for (let row = n; row > 0; row--) {
+      let write = ''
+      for (let col = 1; col <= n; col++) {
+        if (col == row) {
+          write = write + '_'
+        } else {
+          write = write + '*'
+        }
       }
+      console.log(write)
     }
-    console.log(write)
   }
-}
-//#13
-function draw(n) {
-  for (let row = 0; row < n; row++) {
-    let write = ''
-    for (let col = 0; col < n; col++) {
-      if (col > row) {
-        write = write + '_'
-      } else {
-        write = write + '*'
+  //#13
+  function draw(n) {
+    for (let row = 0; row < n; row++) {
+      let write = ''
+      for (let col = 0; col < n; col++) {
+        if (col > row) {
+          write = write + '_'
+        } else {
+          write = write + '*'
+        }
       }
+      console.log(write)
     }
-    console.log(write)
   }
-}
-//#14
-function draw(n) {
-  for (let row = 1; row <= n; row++) {
-    let write = ''
-    for (let col = n; col >= 1; col--) {
-      if (col >= row) {
-        write = write + '*'
-      } else {
-        write = write + '_'
+  //#14
+  function draw(n) {
+    for (let row = 1; row <= n; row++) {
+      let write = ''
+      for (let col = n; col >= 1; col--) {
+        if (col >= row) {
+          write = write + '*'
+        } else {
+          write = write + '_'
+        }
       }
+      console.log(write)
     }
-    console.log(write)
   }
-}
+</script>
